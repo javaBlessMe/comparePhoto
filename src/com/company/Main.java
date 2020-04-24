@@ -43,6 +43,7 @@ public class Main {
                 for (int i = 0; i < firstFolder.length; i++) {
                     comparePhoto(firstFolder[i],secondFolder[i]);
                 }
+                System.out.println("Успешно!");
             }
 
         }
