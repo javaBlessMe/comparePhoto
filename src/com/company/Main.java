@@ -60,10 +60,11 @@ public class Main {
          }
 
          private static void comparePhoto (String firstFile, String secondFile) throws IOException{
-                //создаем название результирующего файла. Оно состоит из имени первого файло(без расширения),
+                //создаем название результирующего файла. Оно состоит из имени первого файла (до точки)
              // соединенного с именем второго файла
-                int a = firstFile.length();
-                String resname = firstFile.substring(0,(a-4))+secondFile;
+                String[] a = firstFile.split("\\.");
+
+                String resname = a[0]+secondFile;
 
               //команда, которая будет исполнена в командной строке
              String s = "magick compare "+firstFolderWay+"\\"+firstFile+" "
